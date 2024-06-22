@@ -1,13 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Prints "with proper grammar, but the outcome is a piece of art,"
- *                followed by a new line.
+ * main - Prints all single-digit numbers of base 10.
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    printf("with proper grammar, but the outcome is a piece of art,\n");
-    return (0); 
+    int digit;
+
+    for (digit = 0; digit < 10; digit++)
+    {
+        putchar(digit + '0');  
+    }
+
+    putchar('\n');  
+    return (0);
 }
+

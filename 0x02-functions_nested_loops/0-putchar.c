@@ -1,20 +1,20 @@
 #include "main.h"
-
 /**
- * main - Entry point of my code,
- * Return: Always 0
+ * main - Entry Block
+  *Description: prints _putchar followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-    putchar('_');
-    putchar('p');
-    putchar('u');
-    putchar('t');
-    putchar('c');
-    putchar('h');
-    putchar('a');
-    putchar('r');
-    putchar('\n');
+	char c[8] = "_putchar";
 
-    return (0);
+	int i = 0;
+
+	while (i < 8)
+	{
+		_putchar(c[i]);
+		i++;
+	}
+	_putchar('\n');
+	return (0);
 }

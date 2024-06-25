@@ -1,32 +1,39 @@
 #include "main.h"
+#include <stdio.h> // Add this line
 
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: the number of rows and columns in the times table
+ * print_times_table - prints the times table for n.
+ * @n: The multiplication table requested.
+ * Return: Nothing.
  */
-void print_times_table(int n) {
+void print_times_table(int n)
+{
+    int i, j, result; // Move variable declarations here
+
     if (n < 0 || n > 15)
-        return;  // Exit if n is out of range
+    {
+        /* Exit if n is out of range */
+        return;
+    }
 
-    int i, j, product;
-
-    for (i = 0; i <= n; i++) {
-        for (j = 0; j <= n; j++) {
-            product = i * j;
-
-            // Print commas and spaces except before the first column
-            if (j > 0) {
+    for (i = 0; i <= n; i++)
+    {
+        for (j = 0; j <= n; j++)
+        {
+            result = (i * j);
+            if (j != 0)
+            {
                 printf(", ");
             }
-
-            // Adjust spacing based on the value of product
-            if (product < 10) {
-                printf("  %d", product);
-            } else if (product < 100) {
-                printf(" %d", product);
-            } else {
-                printf("%d", product);
+            if (result < 10 && j != 0)
+            {
+                printf("   ");
             }
+            else if (result >= 10 && result < 100)
+            {
+                printf("  ");
+            }
+            printf("%d", result);
         }
         printf("\n");
     }

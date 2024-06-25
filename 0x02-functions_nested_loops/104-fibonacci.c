@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    int count = 0;  // Initialize count to 0
+    int count = 0;
     unsigned long fib1 = 1, fib2 = 2, sum;
     unsigned long fib1_half1 = 0, fib1_half2 = 0, fib2_half1 = 0, fib2_half2 = 0;
     unsigned long half1, half2;

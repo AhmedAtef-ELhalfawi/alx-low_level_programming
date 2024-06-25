@@ -1,25 +1,23 @@
-def even_fibonacci_sum(limit):
-    """
-    Calculates the sum of even-valued Fibonacci numbers up to the specified limit.
+#include <stdio.h>
 
-    Args:
-        limit: The maximum value of Fibonacci numbers to consider.
+/**
+ * main - Prints the sum of Even Fibonacci numbers
+ *        less than 4000000.
+ * Return: Nothing!
+ */
+int main(void)
+{
+    int i = 0;
+    long j = 1, k = 2, sum = k;
 
-    Returns:
-        The sum of the even-valued Fibonacci numbers.
-    """
-    a, b = 1, 2  
-    even_sum = 0
-
-    while b <= limit:
-        if b % 2 == 0:
-            even_sum += b
-        a, b = b, a + b  
-
-    return even_sum
-
-if __name__ == "__main__":
-    limit = 4000000
-    result = even_fibonacci_sum(limit)
-    print(result) 
-
+    while (k + j < 4000000)
+    {
+        k += j;
+        if (k % 2 == 0)
+            sum += k;
+        j = k - j;
+        ++i;
+    }
+    printf("%ld\n", sum);
+    return (0);
+}

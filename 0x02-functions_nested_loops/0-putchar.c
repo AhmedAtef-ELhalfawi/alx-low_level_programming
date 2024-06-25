@@ -1,24 +1,21 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * main - Prints "_putchar" followed by a new line.
+ * main - prints _putchar followed by a new line
  *
- * Return: Always 0 (Success).
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char text[] = "_putchar";
-	int i = 0;
+	int i;
+	char c[] = "_putchar";
 
-	while (text[i] != '\0')
+	for (i = 0; i < 8; i++)
 	{
-		write(1, &text[i], 1);
-		i++;
+		_putchar(c[i]);
 	}
-
-	write(1, "\n", 1);
+	_putchar('\n');
 
 	return (0);
 }
-
 

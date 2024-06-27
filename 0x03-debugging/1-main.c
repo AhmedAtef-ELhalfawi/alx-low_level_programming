@@ -1,34 +1,24 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - causes an infinite loop
+ * Return: 0
  */
 
 int main(void)
 {
 	int i;
 
-	i = 0;
+		printf("Infinite loop incoming :(\n");
 
-	/* Print digits from 0 to 9 */
-	while (i < 10)
-	{
-		/*
-		 * This prints the character equivalent of the integer
-		 */
-		putchar(i + '0');
-		i++;
-	}
-	putchar('\n');
+			i = 0;
 
-	/*
-	 * Avoid an infinite loop
-	 */
-	i = 98;
-	positive_or_negative(i);
-
-	return (0);
+			/*
+			 * while (i < 10)
+			 *{
+			 *putchar(i);
+			 * }
+			 */
+		printf("Infinite loop avoided! \\o/\n");
+			return (0);
 }

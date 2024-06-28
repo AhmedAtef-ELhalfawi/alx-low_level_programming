@@ -1,18 +1,17 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * _isdigit - checks if parameter is a number between 0 to 9.
- * @c: input number.
- * Return: 1 if is a number (0 to 9), 0 in other case.
- */
-int _isdigit(int c)
+ * _isupper - check if c is upper
+ *
+ * @c: input for character
+ *
+ * Return: 1 if its uppercase, 0 if not
+*/
+
+int _isupper(int c)
 {
-	if (c >= 48 && c <= 57)
-	{
-	return (1);
-	}
+	if (c >= 65 && c <= 90)
+		return (1);
 	else
-	{
-	return (0);
-	}
+		return (0);
 }

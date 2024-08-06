@@ -1,14 +1,19 @@
-#include "main.h"
+#include "lists.h"
+
 /**
- * _isalpha - returns 1 if c is a letter
- * @c: integer to be tested
- * Return: 1 or 0
+ * free_listint - function that frees a listint_t list
+ * @head: input header pointer
+ * Return: nothing
  */
-int _isalpha(int c)
+
+void free_listint(listint_t *head)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	listint_t *ptr;
+
+	while (head != NULL)
 	{
-		return (1);
+		ptr = head;
+		head = head->next;
+		free(ptr);
 	}
-	return (0);
 }
